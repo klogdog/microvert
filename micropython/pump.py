@@ -56,7 +56,9 @@ while True:
     machine.reset()
   if relayFlag == 1:
       relayPin.value(1)
-      
+      #calibrate the length that the pump operates once hardware is installed
+      time.sleep(5)
+      relayPin.value(0)
   else:
       relayPin.value(0)
   time.sleep(10)
