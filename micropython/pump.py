@@ -19,7 +19,7 @@ mqttClientID = "123456"
 wifissid = "wifissid"
 wifiPassword = "wifiPassword"
 relayPin = Pin(5,Pin.OUT)
-mqttTopic = "actuators/relay"
+mqttTopic = "actuators/pump"
 
 
 wifi_connect(wifissid,wifiPassword)
@@ -31,7 +31,7 @@ relayFlag = 0
 
 def subscribeCallBack(topic, msg):
   global relayFlag
-  if topic == b'actuators/relay':
+  if topic == b'actuators/pump':
     if msg == b'0':
       relayFlag = 0
     if msg == b'1':
