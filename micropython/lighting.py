@@ -58,4 +58,4 @@ while True:
       relayPin.value(1)
   else:
       relayPin.value(0)
-  time.sleep(10
+  time.sleep(10)
